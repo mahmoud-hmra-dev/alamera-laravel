@@ -21,7 +21,7 @@ use App\Http\Controllers\LaboratoryApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get("depot",[DepotApiController::class,'depot']);
-Route::get("laboratory",[LaboratoryApiController::class,'laboratory']);
-Route::get("cru",[CruApiController::class,'cru']);
+Route::get("depot",[DepotApiController::class,'depot'])->name('depot');
+Route::get("laboratory",[LaboratoryApiController::class,'laboratory'])->name('laboratory');
+Route::get("cru",[CruApiController::class,'cru'])->name('cru');
 

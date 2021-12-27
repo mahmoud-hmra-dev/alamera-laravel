@@ -106,7 +106,7 @@
         });
      setTimeout(function() {
             // Get the data
-            $.getJSON("http://127.0.0.1:8000/public/api/laboratory", function(data) {
+            $.getJSON("{{ route('laboratory') }}", function(data) {
                 // Success
                 // This variable will hold all the plots of our map
                 var plots = {};

@@ -53,7 +53,7 @@
 
          setTimeout(function() {
                 // Get the data
-                $.getJSON("http://127.0.0.1:8000/public/api/depot", function(data) {
+                $.getJSON("{{ route('depot') }}", function(data) {
                     // Success
                     // This variable will hold all the plots of our map
                     var plots = {};
@@ -144,7 +144,7 @@
 </script>
 {{-- get laboratorys --}}
 <script>
-    const url = "http://127.0.0.1:8000/public/api/laboratory"
+    const url = "{{ route('laboratory') }}"
       fetch(url).then(response => { return response.json() }).then(laboratory => {
        var x = "";
       var y = "";
@@ -177,7 +177,7 @@
 
 {{-- get crus --}}
 <script>
-    const urllaboratory = "http://127.0.0.1:8000/public/api/cru"
+    const urllaboratory = "{{ route('cru') }}"
       fetch(urllaboratory).then(response => { return response.json() }).then(data2 => {
        var x = "";
       var y = "";
